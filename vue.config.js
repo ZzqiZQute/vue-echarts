@@ -1,6 +1,9 @@
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
   outputDir: 'demo',
+  devServer:{
+	  port:8081
+  },
   transpileDependencies: ['resize-detector'],
   chainWebpack: config => {
     config

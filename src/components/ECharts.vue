@@ -238,8 +238,11 @@ export default {
       if (this.autoresize) {
         removeListener(this.$el, this.__resizeHandler)
       }
-      this.dispose()
-      this.chart = null
+      setTimeout(()=>{
+        this.dispose()
+        this.chart = null
+      },2000)
+      //this.dispose()
     },
     refresh () {
       if (this.chart) {
